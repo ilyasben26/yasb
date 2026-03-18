@@ -12,24 +12,29 @@ For more information about configuration options, please visit the Wiki https://
     --text2: #8f929e;
     --text3: #9399b2;
     --text4: #7f849c;
-    --bg-color1:  rgba(0, 0, 0, 0.5); /* #191919; */
+    --bg-color1:  rgba(0, 0, 0, 1); /* #191919; */
     --bg-color2: #333333;
+    --i3-blue: #285577;
+    --i3-gray: #222222;
+    --i3-gray-text: #5a5a5a;
+    --i3-ws-button-border-blue: #4c7899;
+    --i3-ws-button-border-gray: #484848;
 }
 * {
     font-size: 12px;
     color: var(--text1);
     font-weight: 600;
-    font-family: "JetBrainsMono NFP";
+    font-family: "Hasklug Nerd Font Propo";
 }
 .yasb-bar {
     background-color: var(--bg-color1);
-    border-radius: 8px;
-    border: 1px solid var(--bg-color2);
+    border-radius: 0px;
+    border: 0px solid var(--bg-color2);
 }
 /* Global styles for ToolTip */
 .tooltip {
     background-color: var(--bg-color1);
-    border-radius: 4px;
+    border-radius: 0px;
     color: var(--text1);
     padding: 5px 10px;
     font-size: 12px;
@@ -57,7 +62,7 @@ For more information about configuration options, please visit the Wiki https://
     background-color: transparent;
     padding: 6px 12px;
     margin: 2px 6px;
-    border-radius: 6px;
+    border-radius: 0px;
     min-width: 100px;
 }
 
@@ -135,7 +140,7 @@ For more information about configuration options, please visit the Wiki https://
     margin: 0 3px;
     height: 9px;
     width: 9px;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 .komorebi-workspaces .ws-btn:hover {
     color: var(--text2);
@@ -148,8 +153,8 @@ For more information about configuration options, please visit the Wiki https://
     width: 36px;
 }
 .power-menu-widget .label {
-    color: #f38ba8;
-    font-size: 13px;
+    color: red;
+    font-size: 14px;
 }
 .power-menu-popup {
     background-color: transparent
@@ -158,7 +163,7 @@ For more information about configuration options, please visit the Wiki https://
     padding: 0;
     width: 180px;
     height: 230px;
-    border-radius: 8px;
+    border-radius: 0px;
     background-color: var(--bg-color1);
     border: 4px solid transparent;
     margin: 0px;
@@ -192,7 +197,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .power-menu-popup .button.cancel {
     height: 32px;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 .power-menu-popup .button.cancel.hover .label {
     color: rgb(255, 255, 255)
@@ -213,10 +218,96 @@ For more information about configuration options, please visit the Wiki https://
     color: var(--mauve);
 }
 .volume-widget .icon {
-    font-size: 17px;
-    color: var(--blue);
-    margin: 0px 2px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
 }
+
+.volume-widget {
+    min-width: 72px;
+    max-width: 72px;
+}
+
+.volume-widget .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 72px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.traffic-down-icon-widget {
+    padding: 0 2px 0 6px;
+}
+.traffic-down-icon-widget .label {
+    font-size: 12px;
+    color: var(--blue);
+}
+.traffic-down-speed-widget {
+    min-width: 60px;
+    max-width: 60px;
+    padding: 0 2px;
+}
+.traffic-down-speed-widget .label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--blue);
+    width: 60px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.traffic-up-icon-widget {
+    padding: 0 6px 0 2px;
+}
+.traffic-up-icon-widget .label {
+    font-size: 12px;
+    color: var(--red);
+}
+.traffic-up-speed-widget {
+    min-width: 60px;
+    max-width: 60px;
+    padding: 0 2px;
+}
+.traffic-up-speed-widget .label {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--red);
+    width: 60px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.traffic-pipe-widget {
+    padding: 0 2px;
+}
+.traffic-pipe-widget .label {
+    font-size: 12px;
+}
+
+.memory-widget {
+    min-width: 104px;
+    max-width: 104px;
+    padding: 0 4px;
+}
+.memory-widget .label {
+    font-size: 14px;
+    font-weight: 700;
+    width: 104px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: magenta; 
+}
+
 .weather-widget,
 .volume-widget {
     padding: 0 6px;
@@ -272,8 +363,14 @@ For more information about configuration options, please visit the Wiki https://
 .media-widget {
     padding: 0;
     margin: 0;
-    border-radius: 0;
+    border-radius: 0px;
 }
+
+.media-widget .label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .media-widget .btn {
     color: #7a7f8b;
     padding: 0 4px;
@@ -299,7 +396,7 @@ For more information about configuration options, please visit the Wiki https://
     min-width: 420px;
     max-width: 420px;
     background-color: var(--bg-color1);
-    border-radius: 8px;
+    border-radius: 0px;
     border: 1px solid var(--bg-color2);
 }
 .media-menu .title,
@@ -320,7 +417,7 @@ For more information about configuration options, please visit the Wiki https://
     font-size: 11px;
     color: #000;
     font-weight: normal;
-    border-radius: 3px;
+    border-radius: 0px;
     background-color: #bac2de;
     padding: 2px 4px;
 
@@ -351,7 +448,7 @@ For more information about configuration options, please visit the Wiki https://
     max-width: 40px;
     min-height: 40px;
     max-height: 40px;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 .media-menu .btn.prev {
     margin-left: 10px;
@@ -411,7 +508,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .home-menu {
     background-color: var(--bg-color1);
-    border-radius: 8px;
+    border-radius: 0px;
     border: 1px solid var(--bg-color2);
 }
 .home-menu .menu-item {
@@ -439,10 +536,18 @@ For more information about configuration options, please visit the Wiki https://
     color: var(--blue);
 }
 
+.clock-widget .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+
 .calendar {
     background-color: var(--bg-color1);
-    border-radius: 8px;
+    border-radius: 0px;
     border: 1px solid var(--bg-color2);
+    color: white;
+    font-weight: 700;
 }
 .calendar .calendar-table,
 .calendar .calendar-table::item {
@@ -457,7 +562,7 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .calendar-table::item:selected {
     color: #000000;
     background-color: var(--blue);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 .calendar .day-label {
     margin-top: 20px;
@@ -495,60 +600,111 @@ For more information about configuration options, please visit the Wiki https://
 }
 
 .glazewm-tiling-direction {
-    background-color: transparent;
     padding: 0;
     margin: 0;
 }
 
 .glazewm-tiling-direction .btn {
-    font-size: 18px;
-    width: 14px;
-    padding: 0 4px 0 4px;
-    color: #CDD6F4;
+    font-size: 14px;
+    background-color: transparent; 
     border: none;
+    width: 22px;
+    min-width: 22px;
+    max-width: 22px;
+    padding: 4px 0;
+    text-align: center;
+    margin: 2 1px 0 2px;
+    color: #CDD6F4;
 }
 
 .glazewm-tiling-direction .btn:hover {
     background-color: #727272;
+    border: 1px  solid transparent;
 }
 
 
 .glazewm-workspaces {
-    margin: 0;
+    /* margin: 0; */
+    margin-left: -11px;
 }
 
 .glazewm-workspaces .ws-btn {
     font-size: 14px;
-    background-color: transparent;
+    background-color: transparent; 
     border: none;
-    padding: 0px 4px 0px 4px;
-    margin: 0 2px 0 2px;
+    padding: 2px 4px 2px 4px;
+    margin: 2 1px 0 2px;
     color: #CDD6F4;
 }
 
 .glazewm-workspaces .ws-btn.active_populated {
-    color: #C2DAF7;
+    color: #FFFFFF;
     /*background-color: rgba(0.1, 0.1, 0.1, 0.5) /*#727272;*/
-    border-bottom: 2px solid #C2DAF7;
+    background-color: var(--i3-blue);
+    border: 1px  solid var(--i3-ws-button-border-blue);
     padding-top: 2px;
 }
 .glazewm-workspaces .ws-btn.active_empty {
-    color: #7D8B9D;
-
-    border-bottom: 2px solid #7D8B9D;
+    color: #FFFFFF;
+    /*background-color: rgba(0.1, 0.1, 0.1, 0.5) /*#727272;*/
+    background-color: var(--i3-blue);
+    border: 1px  solid var(--i3-ws-button-border-blue);
     padding-top: 2px;
 }
 
 .glazewm-workspaces .ws-btn.populated {
-    color: #C2DAF7;
+    color: var(--i3-gray-text);
+    background-color: var(--i3-gray);
+    border: 1px  solid var(--i3-ws-button-border-gray);
+    padding-top: 2px;
 }
 
 .glazewm-workspaces .ws-btn.empty {
-    color: #7D8B9D;
+    color: var(--i3-gray-text);
+    background-color: var(--i3-gray);
+    border: 1px  solid var(--i3-ws-button-border-gray);
+    padding-top: 2px;
 }
 
 .glazewm-workspaces .ws-btn:hover,
 .glazewm-workspaces .ws-btn.populated:hover,
 .glazewm-workspaces .ws-btn.empty:hover {
     background-color: #727272;
+}
+
+.cpu-percent-widget,
+.gpu-widget {
+    min-width: 40px;
+    max-width: 60px;
+    padding: 0 2px;
+}
+
+.cpu-percent-widget .label,
+.gpu-widget .label {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 40px;
+    max-width: 60px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cpu-percent-widget .label {
+    color: cyan;
+}
+
+.gpu-widget .label {
+    color: lime;
+}
+
+.active-window-widget {
+    margin-left: -15px;
+}
+
+.active-window-widget .widget-container .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
 }
