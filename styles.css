@@ -528,11 +528,15 @@ For more information about configuration options, please visit the Wiki https://
 
 .glazewm-workspaces .ws-btn.active_populated {
     color: #C2DAF7;
-    background-color: rgba(0.1, 0.1, 0.1, 0.5) /*#727272;*/
+    /*background-color: rgba(0.1, 0.1, 0.1, 0.5) /*#727272;*/
+    border-bottom: 2px solid #C2DAF7;
+    padding-top: 2px;
 }
 .glazewm-workspaces .ws-btn.active_empty {
     color: #7D8B9D;
-    background-color: rgba(0.1, 0.1, 0.1, 0.1) /*#727272;*/
+
+    border-bottom: 2px solid #7D8B9D;
+    padding-top: 2px;
 }
 
 .glazewm-workspaces .ws-btn.populated {

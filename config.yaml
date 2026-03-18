@@ -20,7 +20,7 @@ bars:
       enabled: true
       duration: 400
     blur_effect:
-      enabled: true
+      enabled: false
       acrylic: false
       dark_mode: false
       round_corners: false
@@ -31,7 +31,7 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 32
+      height: 25
     padding:
       top: 4
       left: 4
@@ -46,6 +46,7 @@ bars:
       center:
       - "clock"
       right:
+      - "taskbar"
       - "media"
       - "weather"
       - "microphone"
@@ -65,6 +66,31 @@ widgets:
       system_menu: true
       power_menu: true
       blur: false
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 16
+      tooltip: true
+      show_only_visible: false
+      strict_filtering: true
+      monitor_exclusive: false
+      animation:
+        enabled: true
+      preview:
+        enabled: false
+        width: 240
+        delay: 400
+        padding: 8
+        margin: 8
+      title_label:
+        enabled: false
+        show: "always"
+        min_length: 10
+        max_length: 30
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -300,7 +326,7 @@ widgets:
       hide_if_offline: false
       enable_scroll_switching: true
       btn_shadow:
-        enabled: true
+        enabled: false
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
