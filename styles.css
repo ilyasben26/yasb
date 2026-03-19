@@ -23,7 +23,7 @@ For more information about configuration options, please visit the Wiki https://
 * {
     font-size: 12px;
     color: var(--text1);
-    font-weight: 600;
+    font-weight: 500;
     font-family: "Hasklug Nerd Font Propo";
     /* font-family: "DejaVu Sans Mono"; */
 }
@@ -227,7 +227,6 @@ For more information about configuration options, please visit the Wiki https://
 }
 .volume-widget .icon {
     font-size: 14px;
-    font-weight: 700;
     color: #ffffff;
     margin: 0;
 }
@@ -239,7 +238,7 @@ For more information about configuration options, please visit the Wiki https://
 
 .volume-widget .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: #ffffff;
     width: 72px;
     display: inline-block;
@@ -257,8 +256,8 @@ For more information about configuration options, please visit the Wiki https://
 }
 .traffic-down-speed-widget .label {
     font-size: 14px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
+    /* font-weight: 700; */
+    /* font-variant-numeric: tabular-nums; */
     color: #db6d28;
     width: 90px;
     min-width: 90px;
@@ -279,7 +278,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .traffic-up-speed-widget .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-variant-numeric: tabular-nums;
     color: #da3633;
     width: 90px;
@@ -307,7 +306,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 .memory-widget .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     width: 104px;
     display: inline-block;
     overflow: hidden;
@@ -584,7 +583,7 @@ For more information about configuration options, please visit the Wiki https://
 .calendar .date-label,
 .calendar .week-label,
 .calendar .holiday-label {
-    font-family: "Segoe UI";
+    /* font-family: "Segoe UI"; */
     font-size: 16px;
     color: #fff;
     font-weight: 700;
@@ -642,6 +641,7 @@ For more information about configuration options, please visit the Wiki https://
 
 .glazewm-workspaces .ws-btn {
     font-size: 14px;
+    font-weight: 700;
     background-color: transparent; 
     border: none;
     padding: 2px 4px 2px 4px;
@@ -694,7 +694,7 @@ For more information about configuration options, please visit the Wiki https://
 .cpu-percent-widget .label,
 .gpu-widget .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     min-width: 40px;
     max-width: 60px;
     display: inline-block;
@@ -717,6 +717,6 @@ For more information about configuration options, please visit the Wiki https://
 
 .active-window-widget .widget-container .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: white;
 }
