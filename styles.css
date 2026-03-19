@@ -25,6 +25,7 @@ For more information about configuration options, please visit the Wiki https://
     color: var(--text1);
     font-weight: 600;
     font-family: "Hasklug Nerd Font Propo";
+    /* font-family: "DejaVu Sans Mono"; */
 }
 .yasb-bar {
     background-color: var(--bg-color1);
@@ -152,6 +153,13 @@ For more information about configuration options, please visit the Wiki https://
     background-color: var(--blue);
     width: 36px;
 }
+
+.power-menu-widget {
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-left: 0px;
+}
+
 .power-menu-widget .label {
     color: red;
     font-size: 14px;
@@ -225,8 +233,8 @@ For more information about configuration options, please visit the Wiki https://
 }
 
 .volume-widget {
-    min-width: 72px;
-    max-width: 72px;
+    min-width: 35px;
+    max-width: 35px;
 }
 
 .volume-widget .label {
@@ -240,46 +248,46 @@ For more information about configuration options, please visit the Wiki https://
     white-space: nowrap;
 }
 
-.traffic-down-icon-widget {
-    padding: 0 2px 0 6px;
-}
-.traffic-down-icon-widget .label {
-    font-size: 12px;
-    color: var(--blue);
-}
+
 .traffic-down-speed-widget {
-    min-width: 60px;
-    max-width: 60px;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
     padding: 0 2px;
 }
 .traffic-down-speed-widget .label {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--blue);
-    width: 60px;
-    display: inline-block;
+    font-variant-numeric: tabular-nums;
+    color: #db6d28;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    display: block;
+    margin: 0;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.traffic-up-icon-widget {
-    padding: 0 6px 0 2px;
-}
-.traffic-up-icon-widget .label {
-    font-size: 12px;
-    color: var(--red);
-}
+
 .traffic-up-speed-widget {
-    min-width: 60px;
-    max-width: 60px;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
     padding: 0 2px;
 }
 .traffic-up-speed-widget .label {
-    font-size: 9px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--red);
-    width: 60px;
-    display: inline-block;
+    font-variant-numeric: tabular-nums;
+    color: #da3633;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    display: block;
+    margin: 0;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -305,7 +313,7 @@ For more information about configuration options, please visit the Wiki https://
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: magenta; 
+    color: #bc8cff; 
 }
 
 .weather-widget,
@@ -536,9 +544,13 @@ For more information about configuration options, please visit the Wiki https://
     color: var(--blue);
 }
 
+.clock-widget {
+    padding: 0 6px;
+}
+
 .clock-widget .label {
     font-size: 14px;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: white;
 }
 
@@ -600,7 +612,7 @@ For more information about configuration options, please visit the Wiki https://
 }
 
 .glazewm-tiling-direction {
-    padding: 0;
+    padding: 0px;
     margin: 0;
 }
 
@@ -608,13 +620,13 @@ For more information about configuration options, please visit the Wiki https://
     font-size: 14px;
     background-color: transparent; 
     border: none;
-    width: 22px;
-    min-width: 22px;
-    max-width: 22px;
-    padding: 4px 0;
+    width: 10px;
+    min-width: 10px;
+    max-width: 10px;
+    padding: 0px 0;
     text-align: center;
     margin: 2 1px 0 2px;
-    color: #CDD6F4;
+    color: white;
 }
 
 .glazewm-tiling-direction .btn:hover {
@@ -625,7 +637,7 @@ For more information about configuration options, please visit the Wiki https://
 
 .glazewm-workspaces {
     /* margin: 0; */
-    margin-left: -11px;
+    margin-left: -12px;
 }
 
 .glazewm-workspaces .ws-btn {
@@ -692,11 +704,11 @@ For more information about configuration options, please visit the Wiki https://
 }
 
 .cpu-percent-widget .label {
-    color: cyan;
+    color: #58a6ff;
 }
 
 .gpu-widget .label {
-    color: lime;
+    color: #56d364;
 }
 
 .active-window-widget {

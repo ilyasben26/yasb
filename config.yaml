@@ -40,28 +40,35 @@ bars:
     widgets:
       left:
       # - "home"
-      - "glazewm_tiling_direction"
       - "glazewm_workspaces"
       - "active_window"
       center:
-      - "clock"
       right:
       - "taskbar"
+      - "traffic_pipe"
       - "media"
-      - "weather"
+      - "traffic_pipe"
       # - "microphone"
       # - traffic_down_icon
-      # - traffic_down_speed
-      # # - traffic_pipe
+      - traffic_down_speed
+      - traffic_pipe
       # # - traffic_up_icon
-      # - traffic_up_speed
+      - traffic_up_speed
+      - "traffic_pipe"
       - "memory"
+      - "traffic_pipe"
       - "gpu"
       # - "cpu_icon"
+      - "traffic_pipe"
       - "cpu_percent"
+      - "traffic_pipe"
       - "volume"
+      - "traffic_pipe"
       # - "notifications"
-      - "power_menu"
+      - "glazewm_tiling_direction"
+      - "traffic_pipe"
+      # - "power_menu"
+      - "clock"
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -106,7 +113,7 @@ widgets:
       label: "{artist} - {title}"
       label_alt: "{artist} - {title}"
       max_field_size:
-        label: 24
+        label: 12
         label_alt: 24
       show_thumbnail: true
       controls_only: false
@@ -163,7 +170,8 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a, %d %b %H:%M:%S}"
+      # label: "{%a, %d %b %H:%M:%S}"
+      label: "{%D %H:%M:%S}"
       label_alt: "{%A, %d %B %Y %H:%M}"
       timezones: []
       calendar: 
@@ -285,11 +293,11 @@ widgets:
         radius: 3
         offset: [ 1, 1 ]
   traffic_pipe:
-    type: "yasb.cpu.CpuWidget"
+    type: "yasb.custom.CustomWidget"
     options:
       label: "|"
+      label_alt: "|"
       class_name: "traffic-pipe-widget"
-      update_interval: 2000
   # traffic_up_icon:
   #   type: "yasb.cpu.CpuWidget"
   #   options:
@@ -369,7 +377,8 @@ widgets:
     type: "yasb.volume.VolumeWidget"
     options:
       class_name: "volume-widget"
-      label: "<span>{icon}</span><span>{level}</span>"
+      # label: "<span>{icon}</span><span>{level}</span>"
+      label: "<span>{level}</span>"
       label_alt: "{volume}"
       tooltip: false
       volume_icons:
@@ -422,6 +431,7 @@ widgets:
     options:
       label: "{info[percent][total]}%"
       class_name: "cpu-percent-widget"
+      hide_decimal: true
       update_interval: 2000
       cpu_thresholds:
         low: 25
